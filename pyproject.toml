@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentix-deployment-daytona"
+version = "0.1.0"
+description = "Daytona deployment backend for Agentix"
+requires-python = ">=3.11"
+dependencies = [
+    "agentix>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.6",
+    "pyright>=1.1.380",
+]
+
+[project.entry-points."agentix.deployment"]
+daytona = "agentix.deployment.daytona:DaytonaDeployment"
+
+[tool.hatch.build.targets.wheel]
+packages = ["agentix"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP"]
+
+[tool.pyright]
+include = ["agentix"]
+exclude = ["**/__pycache__", ".venv"]
+typeCheckingMode = "basic"
+pythonVersion = "3.11"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
