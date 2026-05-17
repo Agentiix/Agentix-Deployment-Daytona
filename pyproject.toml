@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agentix-deployment-daytona"
-version = "0.1.0"
+version = "0.1.1"
 description = "Daytona deployment backend for Agentix"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -12,7 +12,7 @@ license = { text = "MIT" }
 authors = [{ name = "Agentiix" }]
 urls = { Homepage = "https://github.com/Agentiix/Agentix-Deployment-Daytona" }
 dependencies = [
-    "agentix>=0.1.0",
+    "agentixx>=0.1.0",
 ]
 
 [project.optional-dependencies]
