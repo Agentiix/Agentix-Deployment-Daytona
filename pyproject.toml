@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agentix-deployment-daytona"
-version = "0.1.1"
+version = "0.1.2"
 description = "Daytona deployment backend for Agentix"
 readme = "README.md"
 requires-python = ">=3.11"
